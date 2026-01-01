@@ -6,7 +6,7 @@
 
 // 링크 복사
 function copyLink(){
-	var url = 'https://comgongnuna.github.io/';
+	var url = 'https://seungjoon-lee-me.github.io/';
 	var textarea = document.createElement("textarea");
 	document.body.appendChild(textarea);
 	textarea.value = url;
@@ -18,64 +18,94 @@ function copyLink(){
 
 // 신부 계좌번호 복사
 function brideAccountNumber(){
-	var bride_account = '00000000 카카오뱅크';
-	var textarea = document.createElement("textarea");
-	document.body.appendChild(textarea);
-	textarea.value = bride_account;
-	textarea.select();
-	document.execCommand("copy");
-	document.body.removeChild(textarea);
-	alert("신부의 계좌번호가 복사되었습니다.\n00000000 카카오뱅크")
+	var bride_account = '00000000 농협';
+
+    // 최신 브라우저를 위한 Clipboard API 사용
+    navigator.clipboard.writeText(bride_account).then(() => {
+        alert("계좌번호가 복사되었습니다.\n" + bride_account);
+    }).catch(err => {
+        console.error('복사 실패:', err);
+        alert("복사에 실패했습니다. 수동으로 복사해 주세요: " + bride_account);
+    });
 }
 
 // 신랑 계좌번호 복사
-function groomAccountNumber(){
-	var groom_account = '00000000 카카오뱅크';
-	var textarea = document.createElement("textarea");
-	document.body.appendChild(textarea);
-	textarea.value = groom_account;
-	textarea.select();
-	document.execCommand("copy");
-	document.body.removeChild(textarea);
-	alert("신랑의 계좌번호가 복사되었습니다.\n00000000 카카오뱅크")
+function groomAccountNumber() {
+    const groom_account = '1002-256-544816 우리은행';
+
+    // 최신 브라우저를 위한 Clipboard API 사용
+    navigator.clipboard.writeText(groom_account).then(() => {
+        alert("계좌번호가 복사되었습니다.\n" + groom_account);
+    }).catch(err => {
+        console.error('복사 실패:', err);
+        alert("복사에 실패했습니다. 수동으로 복사해 주세요: " + groom_account);
+    });
 }
 
-// 아버님 계좌번호 복사 
-function groomsFatherAccountNumber(){
-    var grooms_father_account = '00000000 국민은행';
-	var textarea = document.createElement("textarea");
-	document.body.appendChild(textarea);
-	textarea.value = grooms_father_account;
-	textarea.select();
-	document.execCommand("copy");
-	document.body.removeChild(textarea);
-	alert("계좌번호가 복사되었습니다.\n00000000 국민은행")
+
+// 신랑 어머님 계좌번호 복사 
+function groomsMotherAccountNumber(){
+    const grooms_mother_account = '432-12-017017 농협';
+
+    // 최신 브라우저를 위한 Clipboard API 사용
+    navigator.clipboard.writeText(grooms_mother_account).then(() => {
+        alert("계좌번호가 복사되었습니다.\n" + grooms_mother_account);
+    }).catch(err => {
+        console.error('복사 실패:', err);
+        alert("복사에 실패했습니다. 수동으로 복사해 주세요: " + grooms_mother_account);
+    });
+}
+
+// 신부 아버님 계좌번호 복사 
+function brideFatherAccountNumber(){
+    const bride_father_account = '000-111-22222-333 농협';
+
+    // 최신 브라우저를 위한 Clipboard API 사용
+    navigator.clipboard.writeText(bride_father_account).then(() => {
+        alert("계좌번호가 복사되었습니다.\n" + bride_father_account);
+    }).catch(err => {
+        console.error('복사 실패:', err);
+        alert("복사에 실패했습니다. 수동으로 복사해 주세요: " + bride_father_account);
+    });
+}
+
+// 신부 어머님 계좌번호 복사 
+function brideMotherAccountNumber(){
+    const bride_mother_account = '000-111-22222-333 농협';
+
+    // 최신 브라우저를 위한 Clipboard API 사용
+    navigator.clipboard.writeText(bride_mother_account).then(() => {
+        alert("계좌번호가 복사되었습니다.\n" + bride_mother_account);
+    }).catch(err => {
+        console.error('복사 실패:', err);
+        alert("복사에 실패했습니다. 수동으로 복사해 주세요: " + bride_mother_account);
+    });
 }
 
 
 // 카카오톡 공유하기
 function kakaoShare() {
-    Kakao.init('YOUR APP KEY');
+    Kakao.init('41d078021b55367e7abd127479c25ec1');
     // SDK 초기화 여부를 판단합니다.
     Kakao.isInitialized();
     //console.log(Kakao.isInitialized());
     Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-        title: '재윤🤍영석 결혼합니다.',
-        description: '2024.03.01\n11시 30분 빌라드지디 청담',
+        title: '승준🤍희진 결혼합니다.',
+        description: '2026.04.11\n오후 1시 포항 더 퀸 5층',
         imageUrl: 'https://github.com/jaeyun95/jaeyun95.github.io/blob/main/assets/img/main.jpg?raw=true',
         link: {
-            mobileWebUrl: 'https://comgongnuna.github.io/#!',
-            webUrl: 'https://comgongnuna.github.io/#!',
+            mobileWebUrl: 'https://seungjoon-lee-me.github.io/#!',
+            webUrl: 'https://seungjoon-lee-me.github.io/#!',
         },
         },
         buttons: [
         {
             title: '모바일 청첩장 보기',
             link: {
-            mobileWebUrl: 'https://comgongnuna.github.io/#!',
-            webUrl: 'https://comgongnuna.github.io/#!',
+            mobileWebUrl: 'https://seungjoon-lee-me.github.io/#!',
+            webUrl: 'https://seungjoon-lee-me.github.io/#!',
             },
         },
         ],
