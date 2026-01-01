@@ -16,19 +16,6 @@ function copyLink(){
 	alert("링크가 복사되었습니다. 널리널리 퍼뜨려주세요💕")
 }
 
-// 신부 계좌번호 복사
-function brideAccountNumber(){
-	var bride_account = '00000000 농협';
-
-    // 최신 브라우저를 위한 Clipboard API 사용
-    navigator.clipboard.writeText(bride_account).then(() => {
-        alert("계좌번호가 복사되었습니다.\n" + bride_account);
-    }).catch(err => {
-        console.error('복사 실패:', err);
-        alert("복사에 실패했습니다. 수동으로 복사해 주세요: " + bride_account);
-    });
-}
-
 // 신랑 계좌번호 복사
 function groomAccountNumber() {
     const groom_account = '1002-256-544816 우리은행';
@@ -56,9 +43,22 @@ function groomsMotherAccountNumber(){
     });
 }
 
+// 신부 계좌번호 복사
+function brideAccountNumber(){
+	var bride_account = '302-9973-2684-91 농협';
+
+    // 최신 브라우저를 위한 Clipboard API 사용
+    navigator.clipboard.writeText(bride_account).then(() => {
+        alert("계좌번호가 복사되었습니다.\n" + bride_account);
+    }).catch(err => {
+        console.error('복사 실패:', err);
+        alert("복사에 실패했습니다. 수동으로 복사해 주세요: " + bride_account);
+    });
+}
+
 // 신부 아버님 계좌번호 복사 
 function brideFatherAccountNumber(){
-    const bride_father_account = '000-111-22222-333 농협';
+    const bride_father_account = '706-07-084233 우리은행';
 
     // 최신 브라우저를 위한 Clipboard API 사용
     navigator.clipboard.writeText(bride_father_account).then(() => {
@@ -71,7 +71,7 @@ function brideFatherAccountNumber(){
 
 // 신부 어머님 계좌번호 복사 
 function brideMotherAccountNumber(){
-    const bride_mother_account = '000-111-22222-333 농협';
+    const bride_mother_account = '752-12-026234 농협';
 
     // 최신 브라우저를 위한 Clipboard API 사용
     navigator.clipboard.writeText(bride_mother_account).then(() => {
